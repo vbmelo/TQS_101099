@@ -1,23 +1,19 @@
 //Junit
 import org.example.IStockMarketService;
+import org.example.Stock;
 import org.example.StocksPortfolio;
-import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.api.Test;
 
 //Hamcrest
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 //Mockito
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
@@ -34,11 +30,17 @@ class StocksPortfolioTest {
 
     @Test
     void getTotalValueTest(){
-        portfolio.addStock(new Stock("Positivo Compiuters", 20));
-        portfolio.addStock(new Stock("Tião co.", 10));
+        portfolio.addStock(new Stock("Positivo", 20));
+        portfolio.addStock(new Stock("TiaoCompiuters", 10));
 
-        Mockito.when(mockMarket.getPrice("Positivo Compiuters")).thenReturn
+        Mockito.lenient().when(mockMarket.lookUpPrice("Positivo")).thenReturn(10.0);
+        Mockito.lenient().when(mockMarket.lookUpPrice("TiaoCompiuters")).thenReturn(8.50);
 
+        double correctTotal = 10*20 + 8.50*10;
+
+        assertThat(portfolio.getTotalValue(),is(correctTotal));
+
+        Mockito.verify(mockMarket, Mockito.times(2)).lookUpPrice(Mockito.anyString());
     }
 }
 
