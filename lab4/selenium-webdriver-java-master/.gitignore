@@ -1,0 +1,13 @@
+*~
+target
+.classpath
+.project
+.settings
+.gradle
+/.idea
+*.iml
+build
+bin
+test-output
+.allure
+node_modules
