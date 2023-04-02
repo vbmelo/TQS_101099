@@ -1,0 +1,39 @@
+.navbarWrapper {
+	position: fixed;
+	width: 100%;
+	display: flex !important;
+	justify-content: flex-end !important;
+	align-items: center;
+	justify-items: center;
+	padding: 0 1rem;
+	background-color: rgba(63, 63, 63, 0.452);
+	color: var(--white) !important;
+	/* backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%); */
+}
+
+.nav {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	justify-items: center;
+	width: 100%;
+}
+
+.navbarLinks {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	justify-items: center;
+	width: 100%;
+}
+
+.linkGithubWrapper {
+	color: var(--gray-200);
+
+}
+
+.linkGithubWrapper span {
+	align-items: center;
+	margin-left: 0.5rem;
+}

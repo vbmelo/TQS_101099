@@ -1,0 +1,39 @@
+repositories {
+    mavenCentral()
+}
+
+ext {
+    junitJupiterVersion = '5.9.2'
+    seleniumVersion = '4.8.1'
+    seleniumJupiterVersion  = '4.3.3'
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+jar {
+    archiveBaseName = 'junit5-selenium'
+    archiveVersion = '1.0.0'
+}
+
+test {
+    useJUnitPlatform()
+
+    testLogging {
+        events "passed", "skipped", "failed"
+        showStandardStreams = true
+    }
+}
+
+compileTestJava {
+    sourceCompatibility = 17
+    targetCompatibility = 17
+    options.compilerArgs += '-parameters'
+}
+
+dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter:${junitJupiterVersion}")
+    testImplementation("org.seleniumhq.selenium:selenium-java:${seleniumVersion}")
+    testImplementation("io.github.bonigarcia:selenium-jupiter:${seleniumJupiterVersion}")
+}

@@ -1,0 +1,8 @@
+f2023-03-17 12:13:00 [Test worker] DEBUG i.github.bonigarcia.CalculatorSteps.add(42) -- Adding 4 and 5
+|2023-03-17 12:13:00 [Test worker] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(59) -- Result: 9.0 (expected 9.0)
+r2023-03-17 12:13:00 [Test worker] DEBUG i.github.bonigarcia.CalculatorSteps.substract(50) -- Substracting 7 and 2
+|2023-03-17 12:13:00 [Test worker] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(59) -- Result: 5.0 (expected 5.0)
+f2023-03-17 12:13:00 [Test worker] DEBUG i.github.bonigarcia.CalculatorSteps.add(42) -- Adding 1 and 2
+|2023-03-17 12:13:00 [Test worker] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(59) -- Result: 3.0 (expected 3.0)
+f2023-03-17 12:13:00 [Test worker] DEBUG i.github.bonigarcia.CalculatorSteps.add(42) -- Adding 3 and 7
+~2023-03-17 12:13:00 [Test worker] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(59) -- Result: 10.0 (expected 10.0)

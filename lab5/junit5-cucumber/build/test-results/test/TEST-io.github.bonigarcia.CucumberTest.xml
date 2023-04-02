@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.github.bonigarcia.CucumberTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-03-17T12:13:00" hostname="pop-os" time="0.158">
+  <properties/>
+  <testcase name="Addition" classname="io.github.bonigarcia.CucumberTest" time="0.144"/>
+  <testcase name="Substraction" classname="io.github.bonigarcia.CucumberTest" time="0.004"/>
+  <testcase name="Example #1.1" classname="io.github.bonigarcia.CucumberTest" time="0.003"/>
+  <testcase name="Example #1.2" classname="io.github.bonigarcia.CucumberTest" time="0.003"/>
+  <system-out><![CDATA[2023-03-17 12:13:00 [Test worker] DEBUG i.github.bonigarcia.CalculatorSteps.add(42) -- Adding 4 and 5
+2023-03-17 12:13:00 [Test worker] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(59) -- Result: 9.0 (expected 9.0)
+2023-03-17 12:13:00 [Test worker] DEBUG i.github.bonigarcia.CalculatorSteps.substract(50) -- Substracting 7 and 2
+2023-03-17 12:13:00 [Test worker] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(59) -- Result: 5.0 (expected 5.0)
+2023-03-17 12:13:00 [Test worker] DEBUG i.github.bonigarcia.CalculatorSteps.add(42) -- Adding 1 and 2
+2023-03-17 12:13:00 [Test worker] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(59) -- Result: 3.0 (expected 3.0)
+2023-03-17 12:13:00 [Test worker] DEBUG i.github.bonigarcia.CalculatorSteps.add(42) -- Adding 3 and 7
+2023-03-17 12:13:00 [Test worker] DEBUG i.github.bonigarcia.CalculatorSteps.the_result_is(59) -- Result: 10.0 (expected 10.0)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

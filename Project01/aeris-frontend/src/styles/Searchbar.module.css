@@ -1,0 +1,16 @@
+.searchBarWrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 0.3rem;
+	border-radius: 1rem;
+	background-color:  var(--white);
+	padding-right: 0.5rem;
+
+	width: 100%;
+	max-height: 2.13rem;
+}
+.searchButton {
+	border-radius: 1rem;
+}
