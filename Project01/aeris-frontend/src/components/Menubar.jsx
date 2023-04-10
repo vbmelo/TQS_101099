@@ -3,14 +3,14 @@ import { Wind, GithubLogo, MagnifyingGlass } from "@phosphor-icons/react";
 import { Form, Container, Nav, Navbar } from "react-bootstrap";
 import Searchbar from "./Searchbar";
 
-export default function Menubar() {
+export default function Menubar({searchAirQuality}) {
 	return (
 		<>
 			<Navbar variant="dark" expand="lg" className={styles.navbarWrapper}>
 					<Navbar.Brand href="#home"><Wind size={32} /> A E R I S</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav" className={styles.navbarLinks}>
-						<Searchbar />
+						<Searchbar searchAirQuality={searchAirQuality}/>
 						<Nav className={styles.nav}>
 							<Nav.Link href="#link" className={styles.linkGithubWrapper}>
 									Victor Melo

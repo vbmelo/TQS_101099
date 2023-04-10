@@ -113,3 +113,9 @@ a {
 
 	color: var(--white) !important;
 }
+
+.btn {
+	border-radius: 1rem !important;
+
+	padding: 0.5rem 1rem !important;
+}
