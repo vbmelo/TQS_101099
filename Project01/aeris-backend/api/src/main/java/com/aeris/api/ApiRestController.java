@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 @RequestMapping("/")
 public class ApiRestController {
     private final Map<String, String> cache = new HashMap<>();
@@ -36,9 +36,9 @@ public class ApiRestController {
     private int cacheHits = 0;
     private int cacheMisses = 0;
     private int apiCalls = 0;
-    final Logger logger = LoggerFactory.getLogger(AirQualityRestController.class);
+    final Logger logger = LoggerFactory.getLogger(ApiRestController.class);
 
-    public AirQualityRestController() {
+    public ApiRestController() {
         Timer timer = new Timer();
         TimerTask cacheClearTask = new TimerTask() {
             public void run() {
@@ -77,7 +77,7 @@ public class ApiRestController {
                 .uri(URI.create("https://api.ambeedata.com/latest/by-city?city=" + city))
                 .header(
                         "x-api-key",
-                        "2513ec5fd9098f394d9304ab71f19faefc4a6306f45784003ed8f20eeae8ea70"
+                        "107cc05056211724d8679f13a91ea880e193009dc94d3d1a1df6a2f1817d2819"
                 )
                 .header("Content-type", "application/json")
                 .build();
@@ -126,7 +126,7 @@ public class ApiRestController {
                         URI.create(
                                 "http://api.openweathermap.org/geo/1.0/direct?q=" +
                                         city +
-                                        "&limit=1&appid=3e56ac9f515ce67c8d613f033e5655b5"
+                                        "&limit=1&appid=8c51d283c751a4ddc2ae24d6b9308f66"
                         )
                 )
                 .header("Content-type", "application/json")
@@ -146,7 +146,7 @@ public class ApiRestController {
                         lat +
                         "&lon=" +
                         lon +
-                        "&appid=3e56ac9f515ce67c8d613f033e5655b5";
+                        "&appid=8c51d283c751a4ddc2ae24d6b9308f66";
         HttpRequest request2 = HttpRequest
                 .newBuilder()
                 .uri(URI.create(url))
