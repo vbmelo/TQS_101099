@@ -113,6 +113,8 @@
 }
 
 .diaWrapper {
+	border: 0.1rem solid var(--gray-550);
+	border-radius: 1rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
